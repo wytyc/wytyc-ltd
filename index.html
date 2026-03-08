@@ -9,6 +9,11 @@
     <meta name="keywords" content="Digital Asset Succession, Crypto Inheritance, Property Digital Assets Act 2025, Bitcoin Probate, Digital Wealth Transfer, WYTYC Ltd">
     <link rel="canonical" href="https://wytyc.co.uk" />
 
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
     <meta property="og:title" content="WYTYC Ltd — Making the Intangible, Inheritable" />
     <meta property="og:description" content="Architecting the infrastructure for the world's largest digital wealth transfer." />
     <meta property="og:url" content="https://wytyc.co.uk" />
@@ -71,7 +76,6 @@
             color: var(--text-main);
             transition: color 0.3s;
         }
-        
         .logo:hover { color: var(--link); }
 
         .tagline {
@@ -90,11 +94,9 @@
             font-size: 14px;
             transition: color 0.2s;
         }
-
         nav .nav-links a:hover { color: var(--accent); }
 
         .hero { padding: 100px 0 80px 0; }
-
         .hero h1 {
             font-size: clamp(32px, 5vw, 64px);
             font-weight: 500;
@@ -103,7 +105,6 @@
             margin-bottom: 30px;
             max-width: 900px;
         }
-
         .hero p {
             font-size: 20px;
             color: var(--text-dim);
@@ -121,11 +122,9 @@
             text-decoration: none;
             transition: transform 0.2s, opacity 0.2s;
         }
-
         .button:hover { transform: translateY(-2px); opacity: 0.9; }
 
         .section { padding: 80px 0; border-top: 1px solid var(--border); }
-
         .section h2 {
             font-size: 32px;
             font-weight: 500;
@@ -156,15 +155,8 @@
             border: 1px solid var(--border);
             transition: border-color 0.3s;
         }
-
         .card:hover { border-color: #3b4a6b; }
-
-        .card h3 {
-            margin: 0 0 15px 0;
-            font-size: 19px;
-            color: var(--accent);
-        }
-
+        .card h3 { margin: 0 0 15px 0; font-size: 19px; color: var(--accent); }
         .card p { color: var(--text-dim); font-size: 15px; margin: 0; }
 
         .footer {
@@ -174,13 +166,12 @@
             grid-template-columns: 2fr 1fr 1fr;
             gap: 40px;
         }
-
         .footer h4 { margin-top: 0; color: var(--accent); }
         .footer a { color: var(--link); text-decoration: none; }
         .footer small { color: var(--text-dim); line-height: 1.8; }
 
-        /* The Reveal Animation */
         .reveal-hint { cursor: help; color: var(--link); border-bottom: 1px dotted var(--link); }
+        #contact-area { transition: color 0.3s ease; }
 
         @media(max-width: 768px) {
             .footer { grid-template-columns: 1fr; }
@@ -191,7 +182,6 @@
 </head>
 
 <body>
-
 <div class="background-grid"></div>
 
 <div class="container">
@@ -244,7 +234,7 @@
         <div class="cards">
             <div class="card">
                 <h3>Smart Inheritance Vaults</h3>
-                <p>Distinct Vault structures using battle tested multi‑signature and timelock systems designed for long term asset recovery.</p>
+                <p>Distinct Vault structures using battle tested multi-signature and timelock systems designed for long term asset recovery.</p>
             </div>
             <div class="card">
                 <h3>Death Verification Oracle</h3>
@@ -264,10 +254,16 @@
         </p>
     </section>
 
+    <section class="section">
+        <h2>Our Mission</h2>
+        <p style="color: var(--text-dim); max-width: 850px; font-size: 1.1rem;">
+            We are building a bridge between the world of decentralised finance with the ordered framework of English Law. Ensuring your legacy exists beyond the digital void.
+        </p>
+        <p>Get in touch via X or below as we're in early stages of development.</p>
+    </section>
+
     <footer class="footer">
         <div>
-            <h4>Our Mission: Making the intangible, inheritable</h4>
-            <p style="color: var(--text-dim); max-width: 400px;">We bridge the world of decentralised finance with the ordered framework of English Law. Ensuring your legacy exists beyond the digital void.</p>
             <small>© 2026 WYTYC Ltd. Registered in England & Wales.</small>
         </div>
         <div>
@@ -281,11 +277,22 @@
         <div>
             <h4>The Mystery</h4>
             <small>
-                Website update pending. Can you work out what WYTYC stands for?<br>               
+                Website update pending. Can you work out what WYTYC stands for?<br>
+                <span id="contact-area" onclick="revealContact()">[Click to reveal contact email]</span>
             </small>
         </div>
     </footer>
 </div>
 
+<script>
+    function revealContact() {
+        const u = "ping";
+        const d = "wytyc.co.uk";
+        const el = document.getElementById('contact-area');
+        el.innerHTML = `<a href="mailto:${u}@${d}" style="color:white; text-decoration:underline; font-weight:500;">${u}@${d}</a>`;
+        el.onclick = null;
+        el.style.cursor = "default";
+    }
+</script>
 </body>
 </html>
