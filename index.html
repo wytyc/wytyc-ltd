@@ -23,7 +23,7 @@
     <meta name="twitter:image" content="https://wytyc.co.uk/og-image.png" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@pingwytyc">
+    <meta name="twitter:site" content="@bhaveshpatel">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,12 +61,13 @@
         }
 
         .footer-brand-img {
-    width: 60px; 
-    height: auto;
-    margin-bottom: 12px;
-    opacity: 0.8; 
-    mix-blend-mode: lighten; 
-}
+            width: 60px; 
+            height: auto;
+            margin-bottom: 12px;
+            opacity: 0.8; 
+            mix-blend-mode: lighten; 
+        }
+
         .container {
             max-width: 1100px;
             margin: auto;
@@ -126,15 +127,30 @@
 
         .button {
             display: inline-block;
-            padding: 16px 32px;
+            padding: 12px 24px;
             border-radius: 4px;
             background: var(--accent);
             color: var(--bg);
             font-weight: 600;
+            font-size: 14px;
             text-decoration: none;
             transition: transform 0.2s, opacity 0.2s;
         }
         .button:hover { transform: translateY(-2px); opacity: 0.9; }
+
+        .button-outline {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 4px;
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        .button-outline:hover { transform: translateY(-2px); opacity: 0.9; }
 
         .section { padding: 80px 0; border-top: 1px solid var(--border); }
         .section h2 {
@@ -171,6 +187,26 @@
         .card h3 { margin: 0 0 15px 0; font-size: 19px; color: var(--accent); }
         .card p { color: var(--text-dim); font-size: 15px; margin: 0; }
 
+        .team-role {
+            font-size: 12px;
+            color: #8ab4ff;
+            margin: -8px 0 14px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .team-linkedin {
+            margin: -4px 0 14px 0;
+        }
+
+        .team-linkedin a {
+            color: #8ab4ff;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+        .team-linkedin a:hover { color: var(--accent); }
+
         .footer {
             padding: 80px 0;
             border-top: 1px solid var(--border);
@@ -185,10 +221,23 @@
         .reveal-hint { cursor: help; color: var(--link); border-bottom: 1px dotted var(--link); }
         #contact-area { transition: color 0.3s ease; }
 
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .hero-buttons .button-outline {
+            margin-left: 0;
+        }
+
         @media(max-width: 768px) {
             .footer { grid-template-columns: 1fr; }
             .tagline { display: none; }
             .hero { padding: 60px 0; }
+            .hero-buttons { flex-direction: column; }
+            .hero-buttons .button,
+            .hero-buttons .button-outline { text-align: center; }
         }
     </style>
 </head>
@@ -206,8 +255,8 @@
             <a href="#mission">Mission</a>
             <a href="#solution">Infrastructure</a>
             <a href="#team">Team</a>
-            <a href="https://x.com/pingwytyc" target="_blank">X</a>
-            <a href="https://www.linkedin.com/company/wytyc/" target="_blank">LinkedIn</a>
+            <a href="https://x.com/bhaveshpatel" target="_blank">X</a>
+            <a href="https://www.linkedin.com/in/thedigitalassetman" target="_blank">LinkedIn</a>
         </div>
     </nav>
 
@@ -216,7 +265,10 @@
         <p>
             The <strong>Property (Digital Assets etc) Act 2025</strong> confirms that crypto, NFTs and domains are personal property under English Law. With this change, digital assets now have clearer legal protection, making it much easier to secure your property and manage your estates.
         </p>
-        <a class="button" href="https://x.com/pingwytyc" target="_blank">Follow the Build</a>
+        <div class="hero-buttons">
+            <a class="button" href="https://x.com/bhaveshpatel" target="_blank">Follow the Build</a>
+            <a class="button-outline" href="https://www.linkedin.com/in/thedigitalassetman" target="_blank">Connect on LinkedIn</a>
+        </div>
     </header>
 
     <section class="section" id="mission">
@@ -267,34 +319,44 @@
             WYTYC operates as a <span class="highlight">Technical Service Provider</span>. We are digital architects, not financial custodians and never hold client private keys or funds, ensuring total user sovereignty within a legally compliant framework.
         </p>
     </section>
-    <section class="section" id="team">
-    <h2>The Team</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Bhavesh Patel</h3>
-            <p style="font-size:12px; color:#8ab4ff; margin: -8px 0 14px 0; text-transform: uppercase; letter-spacing: 1px;">Founder &amp; Director</p>
-            <p>Five years of hands-on Web3 experience, including end-to-end delivery of a live blockchain-based product with real world users and on-chain asset management at scale. Ten plus years as senior software technical consultant in accounting and IT. Founded WYTYC to solve the digital succession gap the broader industry has left unaddressed.</p>
-        </div>
-        <div class="card">
-            <h3>Ian Hewitt FFA FIPA</h3>
-            <p style="font-size:12px; color:#8ab4ff; margin: -8px 0 14px 0; text-transform: uppercase; letter-spacing: 1px;">Director</p>
-            <p>A qualified accountant with over 40 years of professional practice. Brings the financial rigour, probate literacy and regulatory discipline this work demands - and that solicitors and executors expect from a serious professional services partner.</p>
-        </div>
-        <div class="card">
-            <h3>Simon Ladd</h3>
-            <p style="font-size:12px; color:#8ab4ff; margin: -8px 0 14px 0; text-transform: uppercase; letter-spacing: 1px;">Consultant</p>
-            <p>Former Community Manager at Sweat Economy for 4 years. Proud Corporate Ambassador for SwissBorg for two years+. Market analysis instructor at MPW Cambridge, a leading feeder college to University of Cambridge, teaching cryptocurrency market analysis.</p>
-        </div>
-    </div>
-</section>
 
-     <section class="section">
+    <section class="section" id="team">
+        <h2>The Team</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Bhavesh Patel</h3>
+                <p class="team-role">Founder &amp; Director</p>
+                <p class="team-linkedin">
+                    <a href="https://www.linkedin.com/in/thedigitalassetman" target="_blank">LinkedIn ↗</a>
+                </p>
+                <p>Five years of hands-on Web3 experience, including end-to-end delivery of a live blockchain-based product with real world users and on-chain asset management at scale. Ten plus years as senior software technical consultant in accounting and IT. Founded WYTYC to solve the digital succession gap the broader industry has left unaddressed.</p>
+            </div>
+            <div class="card">
+                <h3>Ian Hewitt FFA FIPA</h3>
+                <p class="team-role">Director</p>
+                <p class="team-linkedin">
+                    <a href="https://www.linkedin.com/in/ian-hewitt-ffa-fipa-62530026/" target="_blank">LinkedIn ↗</a>
+                </p>
+                <p>A qualified accountant with over 40 years of professional practice. Brings the financial rigour, probate literacy and regulatory discipline this work demands - and that solicitors and executors expect from a serious professional services partner.</p>
+            </div>
+            <div class="card">
+                <h3>Simon Ladd</h3>
+                <p class="team-role">Consultant</p>
+                <p class="team-linkedin">
+                    <a href="https://x.com/simonladd3" target="_blank">X ↗</a>
+                </p>
+                <p>Former Community Manager at Sweat Economy for 4 years. Proud Corporate Ambassador for SwissBorg for two years+. Market analysis instructor at MPW Cambridge, a leading feeder college to University of Cambridge, teaching cryptocurrency market analysis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
         <h2>Our Mission</h2>
         <p>
             We are building a bridge between the world of decentralised finance with the ordered framework of English Law, ensuring your legacy is preserved, protected and enduring in the digital age.
         </p>
         <p style="color: var(--text-dim); max-width: 860px; font-size: 1rem;">
-            We’re in the early stages of development and actively exploring investment opportunities to accelerate our vision. If you’re interested in learning more, get in touch via X or email below.
+            We're in the early stages of development and actively exploring investment opportunities to accelerate our vision. If you're interested in learning more, get in touch via X or email below.
         </p>
     </section>
 
@@ -310,8 +372,10 @@
                 <a href="#mission">Mission</a><br>
                 <a href="#solution">Solution</a><br>
                 <a href="#team">Team</a><br>
-                <a href="https://x.com/pingwytyc" target="_blank">X</a><br>
-                <a href="https://www.linkedin.com/company/wytyc/" target="_blank">LinkedIn</a>
+                <a href="https://x.com/bhaveshpatel" target="_blank">X (Founder)</a><br>
+                <a href="https://x.com/pingwytyc" target="_blank">X (Company)</a><br>
+                <a href="https://www.linkedin.com/in/thedigitalassetman" target="_blank">LinkedIn (Founder)</a><br>
+                <a href="https://www.linkedin.com/company/wytyc/" target="_blank">LinkedIn (Company)</a>
             </small>
         </div>
         <div>
